@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://csnius4o7hp76"]
+
+[ext_resource type="Texture2D" uid="uid://erds6prwqiq" path="res://assets/sprites/weapons/clava.png" id="1_bgrb3"]
+[ext_resource type="Script" uid="uid://eu4yygwk4yy5" path="res://scenes/weapons/arma.gd" id="1_yqbp5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sh2wn"]
+size = Vector2(58, 60)
+
+[node name="Arma" type="Area2D" unique_id=1224279569]
+script = ExtResource("1_yqbp5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1903960811]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_sh2wn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=994036813]
+texture = ExtResource("1_bgrb3")
