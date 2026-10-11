@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+var tem_arma = false
 const SPEED = 200.0
 var health = 100
 var ultima_direcao = "down"
@@ -29,3 +30,12 @@ func atualizar_animacao(direcao):
 func take_damage(valor):
 	health -= valor
 	print("Vida do jogador: ", health)
+	
+func pegar_arma():
+		tem_arma = true
+		print("Peguei a arma!")
+
+func _input(event):
+	if event.is_action_pressed("attack") and tem_arma:
+		print("Ataque!")
+	
